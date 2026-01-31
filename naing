@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffd6e8, #fff1f7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Comic Sans MS", "Poppins", sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 320px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 22px;
+      color: #ff4d88;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    button {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #yes {
+      background: #ff4d88;
+      color: white;
+    }
+
+    #yes:hover {
+      transform: scale(1.1);
+    }
+
+    #no {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- 🔽 ဒီနေရာမှာ ပုံထည့်ပါ -->
+    <img src="plushie.png" alt="Us as plushies" />
+
+    <h1>Will you be my Valentine? 💖</h1>
+
+    <div class="buttons">
+      <button id="yes" onclick="yesClick()">Yes 💕</button>
+      <button id="no" onclick="noClick()">No 😢</button>
+    </div>
+  </div>
+
+  <script>
+    function yesClick() {
+      alert("Yayyy!! 💖 I’m so happy!");
+    }
+
+    function noClick() {
+      const noBtn = document.getElementById("no");
+      noBtn.style.position = "absolute";
+      noBtn.style.top = Math.random() * 80 + "vh";
+      noBtn.style.left = Math.random() * 80 + "vw";
+    }
+  </script>
+
+</body>
+</html>
